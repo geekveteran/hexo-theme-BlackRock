@@ -1,0 +1,14 @@
+<% if (theme.gitalk.enable && theme.gitalk.client_id && theme.gitalk.client_secret){ %>
+  <div id="comments"></div>
+<% } %>
+<% if (theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+  <section id="comments" class="vcomment"></section>
+<% } %>
+<% if (theme.comment.discussion){ %>
+<div id="comments">
+  <div id="discussion_thread"></div>
+</div>
+<% } %>
+
+
+

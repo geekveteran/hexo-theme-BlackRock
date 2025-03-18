@@ -1,0 +1,15 @@
+<% if (theme.share.local_share){ %>
+    <div class="social-share">
+      <span><%= __('shareto') %>:</span>
+    </div>
+<% } %>
+<% if (theme.share.baidu_share){ %>
+    <div class="bdsharebuttonbox">
+      <span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod"><%= __('shareto') %>:</span>
+      <a href="#" class="bds_more" data-cmd="more"></a>
+      <a href="#" class="bds_mshare" data-cmd="mshare" title="share to my share"></a>
+      <a href="#" class="bds_fbook" data-cmd="fbook" title="share to Facebook"></a>
+      <a href="#" class="bds_twi" data-cmd="twi" title="share to Twitter"></a>
+      <a href="#" class="bds_linkedin" data-cmd="linkedin" title="sharelinkedin"></a>
+    </div>
+<% } %>

@@ -1,0 +1,14 @@
+<% if (post.comments){ %>
+<a href="<%- url_for(post.path) %>#comments" class="article-comment-link">
+  <% if (!index){ %>
+    <% if (theme.valine.enable && theme.valine.appId && theme.valine.appKey){ %>
+      <span class="post-comments-count valine-comment-count" data-xid="<%- url_for(post.path) %>" itemprop="commentCount"></span>
+    <% } %>
+    <% if (theme.comment.discussion){ %>
+      <i class="discussion-comment-count" data-discussion-identifier="<%- url_for(post.path) %>"></i>
+    <% } %>
+ <% } %>
+  <i class="BR BR-commt"></i>
+  <%= __('guestbook') %>
+</a>
+<% } %>

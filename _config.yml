@@ -1,0 +1,136 @@
+##########################
+## Site Config Settings ##
+##########################
+
+# Theme version
+version: 1.0.0
+
+# Theme tone
+dark: false # true/false
+favicon: /favicon.png
+banner: "images/banner.jpg"
+banner-dark: "images/banner-dark.jpg"
+
+# Header
+menu:
+  - page: home
+    directory: .
+    icon: BR-home
+  - page: archive
+    directory: archives/
+    icon: BR-archive
+  - page: about
+    directory: about/
+    icon: BR-user
+  - page: rss
+    directory: atom.xml
+    icon: BR-rss
+
+# RSS & Sitemap plugins
+Plugins:
+  hexo-generator-feed
+  hexo-generator-sitemap
+
+# Sitemap
+sitemap:
+  path: sitemap.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+copyright:
+  enable: true # display article copyright information, true/false.
+  content: "Please give the reference."
+
+# Date_formats
+date_formats:
+  post: 'YYYYMMDD'
+  idStr: 'YYYYMMDDHHmmss'
+
+# Sidebar
+sidebar: right  # right/left/bottom
+widgets:
+  - recent_posts
+  - category
+  - archive
+  - tag
+  - links
+
+# Widget behavior
+archive_type: 'yearly' 
+archive_format: 'YYYY' 
+show_count: true
+recent_posts_limits: 5
+
+# Toc
+toc:
+  enable: true
+  list_number: true
+
+# Article share
+share:
+  local_share: true
+  # baidu_share: false
+
+# Miscellaneous
+baidu_analytics:
+google_analytics:
+gauges_analytics:
+
+# MathJax support
+mathjax:
+  enable: false  # true/false.
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+
+# About page
+about:
+  photo_url: ## Your photo e.g. /themeAuthor.jpg
+  items:
+  - label: email
+    url: ## Your email with mailto: e.g.  mailto:chaoles@foxmail.com
+    title: ## Your email e.g.  chaoles@foxmail.com
+  - label: github
+    url: ## Your github'url e.g.  https://github.com/chaooo
+    title: ## Your github'name e.g.  chaooo
+
+# Gitalk comment
+gitalk:
+  enable: false
+  owner: ## Your GitHub ID, e.g. username
+  repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin: ## Github repo owner and collaborators, only these guys can initialize github issues.
+  language: 'En' ## Language
+  pagerDirection: last # Comment sorting direction, available values are last and first.
+
+
+# Valine comment. https://valine.js.org
+valine:
+  enable: false # if you want use valine,please set this value is true
+  appId: # leancloud application app id
+  appKey: # leancloud application app key
+  notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
+  verify: false # valine verify code (true/false)
+  pageSize: 10 # comment list page size
+  avatar: mm # gravatar style https://valine.js.org/#/avatar
+  lang: en # i18n: en
+  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  guest_info: nick,mail,link #valine comment header info
+
+
+
+# Other comments
+comment:
+  discussion: ## discussion_shortname
+
+
+  
+# Friend Links widget. Empty links will hide widget.
+links:
+  - title: site-name1
+    url: http://www.example1.com/
+  - title: site-name2
+    url: http://www.example2.com/
+  - title: site-name3
+    url: http://www.example3.com/

@@ -1,0 +1,12 @@
+{
+  "name": "hexo-theme-BlackRock",
+  "version": "1.0.0",
+  "description": "Hexo Theme BlackRock, a responsive and simple theme",
+  "repository": "geekveteran/hexo-theme-BlackRock",
+  "keywords": [
+    "hexo",
+    "theme",
+    "BlackRock"
+  ],
+  "license": "MIT"
+}

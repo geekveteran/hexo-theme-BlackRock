@@ -39,25 +39,13 @@
         description: description,
         image: image,
         imageSelector: undefined,
-
-        weiboKey: '',
-
-        wechatQrcodeTitle: '微信扫一扫：分享',
-        wechatQrcodeHelper: '<p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p>',
-        wechatQrcodeSize: 100,
-
-        sites: ['weibo', 'qq', 'wechat', 'douban', 'qzone', 'linkedin', 'facebook', 'twitter', 'google'],
+        sites: ['linkedin', 'facebook', 'twitter', 'google'],
         mobileSites: [],
         disabled: [],
         initialized: false
     };
 
     var templates = {
-        qzone: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{URL}}&title={{TITLE}}&desc={{DESCRIPTION}}&summary={{SUMMARY}}&site={{SOURCE}}',
-        qq: 'http://connect.qq.com/widget/shareqq/index.html?url={{URL}}&title={{TITLE}}&source={{SOURCE}}&desc={{DESCRIPTION}}&pics={{IMAGE}}&summary="{{SUMMARY}}"',
-        weibo: 'https://service.weibo.com/share/share.php?url={{URL}}&title={{TITLE}}&pic={{IMAGE}}&appkey={{WEIBOKEY}}',
-        wechat: 'javascript:',
-        douban: 'http://shuo.douban.com/!service/share?href={{URL}}&name={{TITLE}}&text={{DESCRIPTION}}&image={{IMAGE}}&starid=0&aid=0&style=11',
         linkedin: 'http://www.linkedin.com/shareArticle?mini=true&ro=true&title={{TITLE}}&url={{URL}}&summary={{SUMMARY}}&source={{SOURCE}}&armin=armin',
         facebook: 'https://www.facebook.com/sharer/sharer.php?u={{URL}}',
         twitter: 'https://twitter.com/intent/tweet?text={{TITLE}}&url={{URL}}&via={{ORIGIN}}',
@@ -109,7 +97,6 @@
 
         addClass(elem, 'share-component social-share');
         createIcons(elem, data);
-        createWechat(elem, data);
 
         elem.initialized = true;
     }
@@ -135,38 +122,12 @@
 
             link[0].href = url;
 
-            if (name === 'wechat') {
-                link[0].tabindex = -1;
-            } else {
-                link[0].target = '_blank';
-            }
-
             if (!data.initialized) {
                 isPrepend ? elem.insertBefore(link[0], elem.firstChild) : elem.appendChild(link[0]);
             }
         });
     }
 
-
-    /**
-     * Create the wechat icon and QRCode.
-     *
-     * @param {Element} elem
-     * @param {Object} data
-     */
-    function createWechat (elem, data) {
-        var wechat = getElementsByClassName(elem, 'icon-wechat', 'a');
-
-        if (wechat.length === 0) {
-            return false;
-        }
-
-        var elems = createElementByString('<div class="wechat-qrcode"><h4>' + data.wechatQrcodeTitle + '</h4><div class="qrcode"></div><div class="help">' + data.wechatQrcodeHelper + '</div></div>');
-        var qrcode = getElementsByClassName(elems[0], 'qrcode', 'div');
-
-        new QRCode(qrcode[0], {text: data.url, width: data.wechatQrcodeSize, height: data.wechatQrcodeSize});
-        wechat[0].appendChild(elems[0]);
-    }
 
 
     /**
@@ -189,10 +150,6 @@
         }
         if (typeof disabled == 'string') {
             disabled = disabled.split(/\s*,\s*/);
-        }
-
-        if (runningInWeChat) {
-            disabled.push('wechat');
         }
 
         // Remove elements

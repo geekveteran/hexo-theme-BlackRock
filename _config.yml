@@ -84,14 +84,23 @@ mathjax:
 
 # About page
 about:
-  photo_url: ## Your photo e.g. /themeAuthor.jpg
+  photo_url: /author.jpg ## Your photo e.g. /themeAuthor.jpg
   items:
   - label: email
-    url: ## Your email with mailto: e.g.  mailto:chaoles@foxmail.com
-    title: ## Your email e.g.  chaoles@foxmail.com
+    url:
+    ## Your email with mailto: e.g.  mailto:chaoles@foxmail.com
+    title: Geekveteran@outlook.com ## Your email e.g.  chaoles@foxmail.com
+  
   - label: github
-    url: ## Your github'url e.g.  https://github.com/chaooo
-    title: ## Your github'name e.g.  chaooo
+    url: https://github.com/geekveteran
+    ## Your github'url e.g.  https://github.com/geekveteran
+    title: geekveteran
+    ## Your github'name e.g.  geekveteran
+
+  - label: X
+    url: https://x.com/geekvetera1
+    ## Your github'url e.g.  https://github.com/geekveteran
+    title: geekveteran
 
 # Gitalk comment
 gitalk:

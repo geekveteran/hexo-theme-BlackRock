@@ -79,7 +79,7 @@ gauges_analytics:
 
 # MathJax support
 mathjax:
-  enable: false  # true/false.
+  enable: true  # true/false.
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # About page
@@ -99,8 +99,9 @@ about:
 
   - label: X
     url: https://x.com/geekvetera1
-    ## Your github'url e.g.  https://github.com/geekveteran
+    ## Your X'url e.g.  https://X.com/geekveteran
     title: geekveteran
+
 
 # Gitalk comment
 gitalk:

@@ -80,7 +80,7 @@ gauges_analytics:
 # MathJax support
 mathjax:
   enable: true  # true/false.
-  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+  cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0/startup.js
 
 # About page
 about:
